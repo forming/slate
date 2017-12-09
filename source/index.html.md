@@ -178,8 +178,6 @@ server is ready.
 <br><br>
 Last thing server hostname & label
 
-<br><br>
-
 <p align="center">
 <a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_server_label.png?raw=true" align="center" height="128" width="650" ></a>
 </p>
@@ -192,6 +190,220 @@ Download from here: [http://putty.org](http://putty.org)
 Once you install that, back to our Vultr account to grab the login details.
 Now open PuTTY to add the server
 
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_putty_configuration.png?raw=true" align="center" height="416" width="650" ></a>
+</p>
+
+<br><br>
+
+Enter the IP address in the Host Name, and enter the server name to Saved Sessions. Click save.
+<br><br>
+Click the open button. Now the console has opened, click yes.
+<br><br>
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_putty_security_alert.png?raw=true" align="center" height="410" width="650" ></a>
+</p>
+
+<br><br>
+
+Then enter your server login details provided in your Vultr account.
+<br><br>
+Now you cannot ctrl+V to paste in the console. Either right click on mouse or shift+insert (sometimes
+on keyboard it will just be INS key)
+<br><br>
+User: `root`
+<br><br>
+Password: when you paste it will **not** display. So don’t try and paste again. Just paste once and click
+keyboard enter.
+<br><br>
+Now the first thing we are going to do are a few updates to the server and install the required
+dependencies for the wallet to run…
+<br><br>
+Run these commands in order, one at a time:
+<br><br>
+`sudo apt-get update`
+<br><br>
+`sudo apt-get upgrade`
+<br><br>
+`sudo apt-get dist-upgrade`
+<br><br>
+`sudo apt-get install nano htop git`
+<br><br>
+`sudo apt-get install software-properties-common`
+<br><br>
+`sudo apt-get install build-essential libtool autotools-dev pkg-config libssl-dev`
+<br><br>
+`sudo apt-get install libboost-all-dev`
+<br><br>
+`sudo apt-get install libminiupnpc-dev`
+<br><br>
+`sudo apt-get install autoconf`
+<br><br>
+`sudo apt-get install automake`
+<br><br>
+`sudo add-apt-repository ppa:bitcoin/bitcoin`
+<br><br>
+`sudo apt-get update`
+<br><br>
+`sudo apt-get install libdb4.8-dev libdb4.8++-dev`
+<br><br>
+Now we have server updated and all the dependencies installed we can move on to the next part
+and that’s installing a firewall…
+<br><br>
+`apt-get install ufw`
+<br><br>
+`ufw allow ssh/tcp`
+<br><br>
+`ufw limit ssh/tcp`
+<br><br>
+`ufw allow 11771/tcp`
+<br><br>
+`ufw logging on`
+<br><br>
+`ufw enable`
+<br><br>
+Check your firewall status using the following command:
+<br><br>
+`ufw status`
+<br><br>
+Onto the next step, setting up a swap file… Again just follow each one in order:
+<br><br>
+`cd /var`
+<br><br>
+`sudo touch swap.img`
+<br><br>
+`sudo chmod 600 swap.img`
+<br><br>
+`sudo dd if=/dev/zero of=/var/swap.img bs=1024k count=2000`
+<br><br>
+`mkswap /var/swap.img`
+<br><br>
+`sudo swapon /var/swap.img`
+<br><br>
+`sudo free`
+<br><br>
+`sudo echo "/var/swap.img none swap sw 0 0" >> /etc/fstab`
+<br><br>
+`cd`
+<br><br>
+`reboot`
+<br><br>
+
+After the reboot you will need to log back into the server. Once you login again, let’s install and
+compile the Phore wallet…
+<br><br>
+`sudo git clone https://github.com/phoreproject/Phore.git`
+<br><br>
+`chmod +x Phore/autogen.sh`
+<br><br>
+`chmod +x Phore/share/genbuild.sh`
+<br><br>
+`chmod +x Phore/src/leveldb/build_detect_platform`
+<br><br>
+`cd Phore`
+<br><br>
+`sudo ./autogen.sh`
+<br><br>
+`sudo ./configure`
+<br><br>
+`sudo make`
+<br><br>
+`sudo make install`
+<br><br>
+`cd src`
+<br><br>
+`mv phored phore-cli phore-tx ~/`
+<br><br>
+`cd`
+<br><br>
+Now if you plan to setup multiple masternodes, we can go back to our Vultr account and create a
+snapshot of the server we just setup. It will save us time, no requirement to compile again. Unless
+we have a wallet update, then need to start from scratch again for any new MN’s and update the
+ones already running.
+<br><br>
+If you only intend to run one MN, run this command to remove the Phore source files, as they are no
+longer required.
+<br><br>
+`rm -rf Phore`
+<br><br>
+Let’s fire up the daemon on the server, it will give us an error about missing rpc password. We will
+come back to this later.
+<br><br>
+`phored -daemon`
+<br><br>
+Next if you intend to run multiple masternodes we can create the snapshot. Skip this if only intend
+to run one mastermode.
+<br><br>
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_add_snapshot.png?raw=true" align="center" height="488" width="650" ></a>
+</p>
+
+<br><br>
+Click add snapshot and select the server from the dropdown and add a label. Click take snapshot
+<br><br>
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_take_snapshot.png?raw=true" align="center" height="235" width="650" ></a>
+</p>
+
+<br><br>
+This will take a while, grab a cup of tea! :)
+<br><br>
+Once it’s finished we can continue…
+<br><br>
+<h3>Step 1</h3>
+
+We can fire up the qt wallet on your local computer. Generate a new address
+<br><br>
+Enter a label and click Request payment button.
+<br><br>
+Copy the address
+<br><br>
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_create_mn_address.png?raw=true" align="center" height="458" width="650" ></a>
+</p>
+
+<br><br>
+And now go to the send tab
+<br><br>
+Enter the copied address and send **exactly** 10,000 PHR. No more, no less in a single transaction. Wait
+for it to confirm on the blockchain.
+<br><br>
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_send_to_mn.png?raw=true" align="center" height="479" width="650" ></a>
+</p>
+
+<br><br>
+Now create a new .txt file on your computer, to store the date used for the masternode
+<br><br>
+Can use this format:
+<br><br>
+MN Label:
+<br>
+Collateral address:
+<br>
+Masternode Key:
+<br>
+Public IP:
+<br>
+MN conf line:
+<br><br>
+Go to the [**Tools** > **Debug Console**] and enter these commands below:
+<br><br>
+<h3>Step 2</h3>
+
+`masternode genkey`
+<br><br>
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_generate_masternode_output.png?raw=true" align="center" height="215" width="650" ></a>
+</p>
+
+<br><br>
+Copy that into into the .txt file. *Masternode Key*
+<br><br>
+
+<h3>Step 3</h3>
+
+`masternode outputs`
 ## Raspberry Pi Guide
 
 test
