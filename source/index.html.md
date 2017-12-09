@@ -19,12 +19,10 @@ Phore is a digital privacy cryptocurrency with a focus on sustainable developmen
 
 ## Coin Information
 
-`Block Target: 60 seconds`
-`Transaction Fee: 0.0001 PHR per kB`
-`Block Maturity: 50`
-`PoS Reward: 2.8 PHR`
-`Masternode Reward: 4.2 PHR`
-`Masternode Collateral: 10,000 PHR`
+Parameter | 
+--------- |
+Block Target: 60 seconds |
+Transaction Fee: 0.0001 PHR per kB |
 
 ## History
 
