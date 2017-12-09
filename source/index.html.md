@@ -9,6 +9,7 @@ includes:
   - errors
 
 search: true
+
 ---
 
 # Introduction
@@ -135,6 +136,61 @@ What you will need:
 * 10,000 PHR
 
 Register an account with Vultr. Once you’ve done that, can create your first server
+<br><br>
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_add_instance.png?raw=true" align="center" height="107" width="650" ></a>
+</p>
+
+<br><br>
+Select server location, have multiple options to choose from. All are perfectly ok.
+
+<br><br>
+
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_select_location.png?raw=true" align="center" height="356" width="650" ></a>
+</p>
+
+<br><br>
+
+Next server type: Select Ubuntu 16.4 x64
+
+<br><br>
+
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_select_os.png?raw=true" align="center" height="235" width="650" ></a>
+</p>
+
+<br><br>
+
+Server size, select the $5/mo option
+
+<br><br>
+
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_select_server_size.png?raw=true" align="center" height="284" width="650" ></a>
+</p>
+
+<br><br>
+
+You can setup a SSH key so you don’t need to use the password every time to login to the server. But
+to keep things simple for the moment we are just going to use the standard password given after the
+server is ready.
+<br><br>
+Last thing server hostname & label
+
+<br><br>
+
+<p align="center">
+<a href="url"><img src="https://github.com/forming/slate/blob/master/source/images/vps_create_server_label.png?raw=true" align="center" height="128" width="650" ></a>
+</p>
+
+<br><br>
+
+Next we’re going to install PuTTY while the server is being setup.
+Download from here: [http://putty.org](http://putty.org)
+<br><br>
+Once you install that, back to our Vultr account to grab the login details.
+Now open PuTTY to add the server
 
 ## Raspberry Pi Guide
 
