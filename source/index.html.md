@@ -43,13 +43,13 @@ A two-month window was given to existing KTK holders to swap their coins for new
 ## Team
 
 The coin has a strong and committed team:
-    ● Phroshi - Lead Developer
-    ● Julian - Core Developer
-    ● Fish313 - Technical Support & Social Media Manager
-    ● Toby - Customer Relations & Social Media Manager
-    ● Shanto - Community Manager & Customer Relations
-    ● Liray - Technical Support & Japanese Community Manager
-    ● Ubermaster - Planning and Partnerships
+- Phroshi - Lead Developer
+- Julian - Core Developer
+- Fish313 - Technical Support & Social Media Manager
+- Toby - Customer Relations & Social Media Manager
+- Shanto - Community Manager & Customer Relations
+- Liray - Technical Support & Japanese Community Manager
+- Ubermaster - Planning and Partnerships
 
 We will hire more staff and developers to strengthen our team as the Phore expands and
 evolves.
@@ -67,8 +67,8 @@ inflation.
 
 ## Short Term (Q3 - Q4, 2017)
 
-    ● Masternode Governance - Those with Masternodes would be given ‘yes’ or ‘no’ votes
+- Masternode Governance - Those with Masternodes would be given ‘yes’ or ‘no’ votes
     using commands built into Phore wallets. Decentralized governance will allow a cryptocurrency
     network to grow, and incorporate democratic procedures that will ensure the
     longevity of the project, leading to a truly decentralized management system.
-    ● Online Marketplace - UI compatibility for all devices. 
+- Online Marketplace - UI compatibility for all devices. 
