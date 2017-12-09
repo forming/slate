@@ -120,3 +120,27 @@ placements at Phore.
 voted by the Masternode Governance system.
 * Further Partnerships - With industry-leading companies.
 * Event Sponsorship - Sponsor Phore related events to promote Phore as a platform
+
+# Masternodes
+
+Masternode definition.
+
+## Vultr VPS Server Guide
+
+What you will need:
+
+* Local computer windows 7-10
+* Remote server – VPS [www.vultr.com/](https://www.vultr.com/?ref=7216049)
+* PuTTY to configure and setup VPS
+* 10,000 PHR
+
+Register an account with Vultr. Once you’ve done that, can create your first server
+
+## Raspberry Pi Guide
+
+test
+
+
+
+
+
