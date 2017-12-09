@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Documentation
 
 toc_footers:
   - <a href='https://phore.io/'>Phore.io</a>
@@ -19,10 +19,14 @@ Phore is a digital privacy cryptocurrency with a focus on sustainable developmen
 
 ## Coin Information
 
- | 
---------- |
-Block Target: 60 seconds |
-Transaction Fee: 0.0001 PHR per kB |
+ | |
+--------- |--------- |
+Block Target | 60 seconds |
+Transaction Fee| 0.0001 PHR per kB |
+Block Maturity | 50 |
+PoS Reward | 2.8 PHR |
+Masternode Reward | 4.2 PHR |
+Masternode Collateral | 10,000 PHR |
 
 ## History
 
@@ -62,8 +66,57 @@ A number of these will add to the functionality and strategic integration of the
 
 ## Short Term (Q3 - Q4, 2017)
 
-* Masternode Governance - Those with Masternodes would be given ‘yes’ or ‘no’ votes
+* **Zerocoin Protocol** - Fixes a major weakness within most digital currencies. With
+Zerocoin Protocol implemented within Phore, your purchases and transactions are
+secure and no one is privy to your financial activity.
+* **Masternode Governance** - Those with Masternodes would be given ‘yes’ or ‘no’ votes
     using commands built into Phore wallets. Decentralized governance will allow a cryptocurrency
     network to grow, and incorporate democratic procedures that will ensure the
     longevity of the project, leading to a truly decentralized management system.
-* Online Marketplace - UI compatibility for all devices. 
+* **Online Marketplace** - UI compatibility for all devices. 
+
+## Medium Term (Q1, 2018)
+
+* **Segregated Witness** - Allows the number of transactions per block on the Phore
+blockchain to be increased. All signature data will be removed so that more transaction
+data can be packed in.
+* **Decentralized Micro Crowdfunding** - Part of the Online Marketplace. A decentralized
+Kickstarter or Indiegogo platform, targeted at the 'side-hustle’ and micro-business
+generation. This means that the individual, partnership, or small startup with a brilliant
+invention or service can easily use the Phore platform to raise money, with much lower
+fees than other traditional platforms. We will also act as escrow until the product is
+received by the buyer.
+* **Creation of the Phore Foundation** - Develop long-term e-commerce solutions,
+investments, partnerships, and to promote the sustainability and longevity of Phore.
+
+## Medium to Long Term (Q2-Q4, 2018)
+
+* **Smart Contracts** - This will allow decentralized apps (dApps) to run on the Phore 
+Page 5 of 6
+blockchain. Payment channels, trustless prediction markets, and decentralized
+exchanges are all things we expect to see.
+* **iOS and Android apps** - Integrated wallets and online marketplace access. This will
+unshackle Phore from use on laptops and desktops to make it a true mobile-friendly
+platform.
+* **Ledger and Trezor Support** - For long-term cold storage.
+* **Phore Labs** - Incubator for Phore related projects to encourage development and
+growth through the Phore blockchain
+
+The Phore Foundation will invest in projects to help them reach market and then reinvest
+profits in further projects. It is envisioned that ultimately 5-10% of the projects on the
+marketplace will be taken up by Phore Lab projects.
+The Phore Foundation will actively seek out projects to support. These will be sourced from
+individuals, universities, start-ups, and cooperatives around the world who have the capacity
+improve the lives of others. Investments will be made in the form of Phore currency, and
+participants will sell exclusively through the Phore marketplace online for a fixed minimum
+period before being allowed to sell their product locally offline.
+
+## Long Term (Q4, 2018 and beyond)
+
+* A.I. Bot creation - For trading support of Phore on exchanges.
+* Phore Foundation Scholarships - Talented Coders will receive paid internships on
+placements at Phore.
+* Phore Foundation Charitable Donations - Phore will be donated to charitable causes as
+voted by the Masternode Governance system.
+* Further Partnerships - With industry-leading companies.
+* Event Sponsorship - Sponsor Phore related events to promote Phore as a platform
