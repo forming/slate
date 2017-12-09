@@ -19,7 +19,7 @@ Phore is a digital privacy cryptocurrency with a focus on sustainable developmen
 
 ## Coin Information
 
-Parameter | 
+ | 
 --------- |
 Block Target: 60 seconds |
 Transaction Fee: 0.0001 PHR per kB |
